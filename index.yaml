@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   lutho:
   - apiVersion: v2
+    appVersion: 0.4.2-alpha
+    created: "2024-09-25T18:30:19.74512131Z"
+    description: Manage Kubernetes based resources in a different way
+    digest: 086c653bedd58727562e4af72fdbe2a00ee6f70c8294973797c7bb498baae767
+    home: https://kubeflame.github.io
+    keywords:
+    - lutho
+    - kubernetes
+    - kubeflame
+    maintainers:
+    - email: kubeflame@outlook.com
+      name: KubeFlame
+      url: https://github.com/kubeflame/charts
+    name: lutho
+    type: application
+    urls:
+    - https://github.com/kubeflame/charts/releases/download/0.1.2/lutho-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.4.1-alpha
     created: "2024-09-25T13:41:34.757974079Z"
     description: Manage Kubernetes based resources in a different way
@@ -38,4 +57,4 @@ entries:
     urls:
     - https://github.com/kubeflame/charts/releases/download/0.1.0/lutho-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-25T13:41:34.757988677Z"
+generated: "2024-09-25T18:30:19.745138381Z"
