@@ -2,8 +2,7 @@
 name: chart-publish
 on:
   push:
-    branches:
-      - main
+    tags: ["[0-9]+.[0-9]+.[0-9]+", "[0-9]+.[0-9]+.[0-9]+-[a-z]+"]
 env:
   HELM_DOCS_VERSION: "1.14.2"
 
@@ -48,16 +47,16 @@ jobs:
         with:
           version: 1.2.0
       - uses: sigstore/cosign-installer@v3.5.0
-      - name: Push chart to GHCR
-        run: |
-          shopt -s nullglob
-          for pkg in .cr-release-packages/*; do
-            if [ -z "${pkg:-}" ]; then
-              break
-            fi
-            helm push "${pkg}" oci://ghcr.io/"${GITHUB_REPOSITORY_OWNER}" |& tee .digest
-            cosign sign --yes $(cat .digest | awk -F "[, ]+" '/Pushed/{print $NF}')
-          done
+      # - name: Push chart to GHCR
+      #   run: |
+      #     shopt -s nullglob
+      #     for pkg in .cr-release-packages/*; do
+      #       if [ -z "${pkg:-}" ]; then
+      #         break
+      #       fi
+      #       helm push "${pkg}" oci://ghcr.io/"${GITHUB_REPOSITORY_OWNER}" |& tee .digest
+      #       cosign sign --yes $(cat .digest | awk -F "[, ]+" '/Pushed/{print $NF}')
+      #     done
       - name: install helm-docs
         run: |
           cd /tmp
