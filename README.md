@@ -10,7 +10,7 @@ Manage Kubernetes based resources in a different way
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| KubeFlame |  | <https://github.com/kubeflame/charts> |
+| KubeFlame | <kubeflame@outlook.com> | <https://github.com/kubeflame/charts> |
 
 ## Installing the Chart
 
