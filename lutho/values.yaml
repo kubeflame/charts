@@ -1,4 +1,5 @@
-# Lutho's authentication type: kubeconfig | access-token | in-cluster
+# Use "in-cluster" to authorize the service using a ServiceAccount,
+# leave empty to authorize manually in the UI using an AccessToken or a Kubeconfig
 authType: "in-cluster"
 
 replicaCount: 1

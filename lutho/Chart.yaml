@@ -3,8 +3,8 @@ name: lutho
 description: Manage Kubernetes based resources in a different way
 home: https://kubeflame.github.io
 type: application
-version: 0.1.2
-appVersion: "0.4.2-alpha"
+version: 0.1.3
+appVersion: "0.4.3-alpha"
 keywords:
 - lutho
 - kubernetes
